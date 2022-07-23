@@ -28,15 +28,15 @@
             android:id="@+id/sleep_list"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/start_button"
             app:layout_constraintBottom_toTopOf="@id/clear_button"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
-
-            <!-- In the TextView, we can access the nightsString LiveData,
-                 which keeps it displayed and updated in the TextView
-                 whenever it changes. -->
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/start_button"
+            tools:itemCount="5"
+            tools:listitem="@layout/list_item" />
+        <!-- In the TextView, we can access the nightsString LiveData,
+             which keeps it displayed and updated in the TextView
+             whenever it changes. -->
 
 
         <!-- With data binding and LiveData, we can track the buttons' visibility states

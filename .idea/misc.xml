@@ -10,9 +10,11 @@
         <entry key="..\:/Android Developer/AndroidStudioProjects/SleepTracker/app/src/main/res/font/fonts.xml" value="0.20462962962962963" />
         <entry key="..\:/Android Developer/AndroidStudioProjects/SleepTracker/app/src/main/res/font/roboto.xml" value="0.20462962962962963" />
         <entry key="..\:/Android Developer/AndroidStudioProjects/SleepTracker/app/src/main/res/layout/activity_main.xml" value="0.2109375" />
+        <entry key="..\:/Android Developer/AndroidStudioProjects/SleepTracker/app/src/main/res/layout/fragment_sleep_details.xml" value="0.225" />
         <entry key="..\:/Android Developer/AndroidStudioProjects/SleepTracker/app/src/main/res/layout/fragment_sleep_quality.xml" value="0.225" />
         <entry key="..\:/Android Developer/AndroidStudioProjects/SleepTracker/app/src/main/res/layout/fragment_sleep_tracker.xml" value="0.225" />
-        <entry key="..\:/Android Developer/AndroidStudioProjects/SleepTracker/app/src/main/res/layout/list_item.xml" value="0.25" />
+        <entry key="..\:/Android Developer/AndroidStudioProjects/SleepTracker/app/src/main/res/layout/header.xml" value="0.225" />
+        <entry key="..\:/Android Developer/AndroidStudioProjects/SleepTracker/app/src/main/res/layout/list_item.xml" value="0.21631644004944375" />
         <entry key="..\:/Android Developer/AndroidStudioProjects/SleepTracker/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1105" />
       </map>
     </option>

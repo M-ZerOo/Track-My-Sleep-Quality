@@ -5,9 +5,7 @@ import androidx.lifecycle.*
 import com.melfouly.sleeptracker.database.SleepDatabaseDao
 import com.melfouly.sleeptracker.database.SleepNight
 import com.melfouly.sleeptracker.formatNights
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 /**
  * ViewModel for SleepTrackerFragment.
@@ -19,10 +17,6 @@ class SleepTrackerViewModel(
 
     private var tonight = MutableLiveData<SleepNight?>()
     val nights = database.getAllNights()
-
-    val nightsString = Transformations.map(nights) { nights ->
-        formatNights(nights, application.resources)
-    }
 
     val startButtonVisible = Transformations.map(tonight) {
         null == it
@@ -75,15 +69,15 @@ class SleepTrackerViewModel(
     }
 
     private suspend fun insert(night: SleepNight) {
-            database.insert(night)
+        database.insert(night)
     }
 
     private suspend fun update(night: SleepNight) {
-            database.update(night)
+        database.update(night)
     }
 
     private suspend fun clear() {
-            database.clear()
+        database.clear()
     }
 
     fun doneNavigating() {

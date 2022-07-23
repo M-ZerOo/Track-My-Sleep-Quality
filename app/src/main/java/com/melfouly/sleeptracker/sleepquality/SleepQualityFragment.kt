@@ -11,7 +11,6 @@ import androidx.navigation.fragment.findNavController
 import com.melfouly.sleeptracker.R
 import com.melfouly.sleeptracker.database.SleepDatabase
 import com.melfouly.sleeptracker.databinding.FragmentSleepQualityBinding
-import com.melfouly.sleeptracker.sleeptracker.SleepTrackerViewModel
 
 class SleepQualityFragment : Fragment() {
 
@@ -33,6 +32,7 @@ class SleepQualityFragment : Fragment() {
 
         binding.sleepQualityViewModel = sleepQualityViewModel
 
+        // Observer to navigate from quality fragment to tracker fragment.
         sleepQualityViewModel.navigateToSleepTracker.observe(viewLifecycleOwner) {
             if (it == true) {
                 this.findNavController().navigate(

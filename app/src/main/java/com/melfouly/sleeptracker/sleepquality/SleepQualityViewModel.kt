@@ -1,13 +1,13 @@
 package com.melfouly.sleeptracker.sleepquality
 
-import android.util.Log
 import androidx.lifecycle.*
 import com.melfouly.sleeptracker.database.SleepDatabaseDao
 import kotlinx.coroutines.launch
 
 class SleepQualityViewModel(
     private val sleepNightKey: Long,
-    val database: SleepDatabaseDao) : ViewModel() {
+    val database: SleepDatabaseDao
+) : ViewModel() {
 
     private val _navigateToSleepTracker = MutableLiveData<Boolean?>()
     val navigateToSleepTracker: LiveData<Boolean?> get() = _navigateToSleepTracker
