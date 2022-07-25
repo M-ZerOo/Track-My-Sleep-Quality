@@ -2,7 +2,9 @@ package com.melfouly.sleeptracker.sleepquality
 
 import androidx.lifecycle.*
 import com.melfouly.sleeptracker.database.SleepDatabaseDao
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class SleepQualityViewModel(
     private val sleepNightKey: Long,
@@ -18,9 +20,11 @@ class SleepQualityViewModel(
 
     fun onSetSleepQuality(quality: Int) {
         viewModelScope.launch {
-            val tonight = database.get(sleepNightKey) ?: return@launch
-            tonight.sleepQuality = quality
-            database.update(tonight)
+            withContext(Dispatchers.IO) {
+                val tonight = database.get(sleepNightKey) ?: return@withContext
+                tonight.sleepQuality = quality
+                database.update(tonight)
+            }
         }
         _navigateToSleepTracker.value = true
     }
